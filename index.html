@@ -1,514 +1,661 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<title>Naresh</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Chrome, Firefox OS and Opera -->
-<meta name="theme-color" content="#1e2327" />
-<!-- iOS Safari -->
-<meta name="apple-mobile-web-app-status-bar-style" content="#404040">
-<meta name="referrer" content="origin">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
-<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:600" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/my_website.css">
-<link rel="icon" type="image/x-icon" href="images/personal-website-logo.webp" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/index.js"></script>
-<style>
-    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-    .w3-row-padding img {margin-bottom: 12px}
-    .bgimg {
-        background-size: cover;
-        min-height: 100%;
-    }
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    a {
-        text-decoration: none;
-    }
+  <title>iPortfolio Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    .description{
-        color: #404040;
-    }
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    #network {
-        height: 100%;
-        position: fixed;
-        width: 30%;
-        background: linear-gradient(to bottom right, rgba(200,200,200,0), rgba(255,255,255,0)); /* Modify this to add color */
-    }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    input:focus {
-        outline: none !important;
-        border:1px solid gray;
-        box-shadow: 0 0 10px #CCCCCC;
-    }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    textarea:focus {
-        outline: none !important;
-        border:1px solid gray;
-        box-shadow: 0 0 10px #CCCCCC;
-    }
-    .bottom-shadow {
-        box-shadow: 20px 0 10px #CCCCCC;
-    }
-</style>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v3.3.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
 
 <body>
 
-<!-- Sidebar with image -->
-<nav class="w3-sidebar w3-hide-medium w3-hide-small w3-animate-opacity" style="width:30%;">
-    <div class="w3-display-container bgimg">
-        <canvas id="network"></canvas>
-        <div class="w3-container w3-display-topmiddle" style="margin-top: 40px">
-            <img src="images/Me%20_2.jpg" alt="Boss" style="width:100%;box-shadow: 5px 5px 20px #BBBBBB ;" class="w3-circle">
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
-        <div class="w3-display-middle" style="margin-top: 16%;">
-            <div class="w3-bar-block w3-center">
-                <a href="#home" class="w3-bar-item w3-button w3-text-dark-gray w3-round-large w3-hover-opacity w3-hover-black">Home</a>
-                <a href="#blog" class="w3-bar-item w3-button w3-text-dark-gray w3-hover-black w3-round-large w3-hover-opacity w3-hover-black">Blog</a>
-                <a href="#projects" class="w3-bar-item w3-button w3-text-dark-gray w3-hover-black w3-round-large w3-hover-opacity w3-hover-black">Projects</a>
-                <a href="#publications" class="w3-bar-item w3-button w3-text-dark-gray w3-hover-black w3-round-large w3-hover-opacity w3-hover-black">Publications</a>
-                <a href="#contact" class="w3-bar-item w3-button w3-text-dark-gray w3-hover-black w3-round-large w3-hover-opacity w3-hover-black">Contact</a>
-            </div>
-        </div>
-        <div class="w3-container w3-display-bottommiddle" style="width: 50%; margin-bottom: 9%">
-            <!-- <h3 class="w3-center" style="color:black; font-family: Satisfy">Naresh Nagabushan</h3> -->
-            <div class="w3-row-padding">
-                <div class="w3-quarter">
-                    <a href="https://github.com/Naresh1318"><i class="fa fa-github w3-hover-opacity w3-xlarge w3-col s3"></i></a>
-                </div>
-                <div class="w3-quarter">
-                    <a href="https://www.linkedin.com/in/naresh-nagabushan-2946b013a"><i class="fa fa-linkedin w3-hover-opacity w3-xlarge w3-col s3"></i></a>
-                </div>
-                <div class="w3-quarter">
-                    <a href="https://twitter.com/Naresh_Reddy_"><i class="fa fa-twitter w3-hover-opacity w3-xlarge w3-col s3"></i></a>
-                </div>
-                <div class="w3-quarter">
-                    <a href="https://www.facebook.com/rnaresh.n"><i class="fa fa-facebook-official w3-hover-opacity w3-xlarge w3-col s3"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="w3-display-bottommiddle" style="font-size: 13px; margin-left:7%; width: 60%; margin-bottom: 2%"><br/>Copyright (c) 2017 Naresh Nagabushan</div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
     </div>
-</nav>
+  </header><!-- End Header -->
 
-<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
-        <i class="fa fa-remove"></i>
-    </a>
-    <div class="w3-bar-block w3-center">
-        <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
-        <a href="#blog" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Blog</a>
-        <a href="#projects" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Projects</a>
-        <a href="#publications" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Publications</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Alex Smith</h1>
+      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
     </div>
-</nav>
+  </section><!-- End Hero -->
 
-<!-- Page Content -->
-<div id="#home" class="w3-main w3-padding-large" style="margin-left:30%;">
+  <main id="main">
 
-    <!-- Navbar for large screens -->
-    <div class="w3-top w3-hide-small w3-hide-medium">
-        <div class="w3-bar" id="myNavbar">
-            <a href="#home" class="w3-bar-item w3-button w3-xlarge" style="margin-left:27%;"><span style="color:black; font-family: Satisfy">Naresh Nagabushan</span></a>
-        </div>
-    </div>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
 
-
-    <!-- Navbar for small and medium screens -->
-    <div class="w3-top w3-hide-large">
-        <div class="w3-bar w3-hide-large" id="mySmallNavbar">
-            <a href="#home" class="w3-bar-item w3-button w3-xlarge" style="margin-left:16%;"><span style="color:black; font-family: Satisfy">Naresh Nagabushan</span></a>
-        </div>
-    </div>
-
-    <!-- Menu icon to open sidebar -->
-    <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black w3-hide-large" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
-
-    <!-- Header -->
-    <header class="w3-container w3-animate-opacity" style="padding:128px 16px" id="home">
-
-        <p class="typing-effect w3-jumbo w3-hide-small w3-hide-medium" style="font-family: 'Source Code Pro', monospace;">
-            Hey!
-        </p>
-
-        <p class="w3-large w3-hide-small w3-hide-medium description" style="margin-top:-100px; padding-left: 65px; font-family: 'Source Code Pro', monospace;">
-            I'm Naresh, a Master's student at Virginia Tech interested in AI and its impact on our lives.
-        </p>
-
-        <img src="images/Me%20_2.jpg" alt="boss" class="w3-image w3-hide-large w3-hide-small w3-circle" style="display:block;width:60%;margin:auto;box-shadow: 5px 5px 20px #BBBBBB;">
-        <img src="images/Me%20_2.jpg" alt="boss" class="w3-image w3-hide-large w3-hide-medium w3-circle" width="1000" height="1333" style="box-shadow: 5px 5px 20px #BBBBBB; width:60%; margin-left: 20%;">
-
-        <!-- About Small amd medium screen -->
-        <p class="w3-large w3-hide-large w3-center description" style="padding-left: 5%; margin-top: 10%; font-family: 'Source Code Pro', monospace;">
-            Hey!, I'm Naresh, a Master's student at Virginia Tech interested in AI and its impact on our lives.
-        </p>
-
-
-        <span class="w3-hide-large w3-hide-medium">
-            <br>
-            <br>
-        </span>
-
-        <div class="w3-center w3-hide-small w3-hide-medium" style="margin-top: 12%;">
-            <button class="w3-button w3-light-grey w3-padding-large w3-round-large">
-                <a href="https://goo.gl/pfXJZv"><i class="fa fa-download"></i> Download Resume</a>
-            </button>
+        <div class="section-title">
+          <h2>About</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <div class="w3-center w3-hide-large" style="margin-top: 12%; margin-left: 10%">
-            <button class="w3-button w3-light-grey w3-padding-large w3-round-large">
-                <a href="https://goo.gl/pfXJZv"><i class="fa fa-download"></i> Download Resume</a>
-            </button>
-        </div>
-
-        <!-- Down Button -->
-        <a href="#blog" class="w3-hide-medium">
-            <div class="w3-container" style="margin-left: 47%; margin-top: 13%">
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>UI/UX Designer &amp; Web Developer.</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
             </div>
-        </a>
-
-    </header>
-
-    <!-- Blog -->
-    <div class="w3-padding-32 w3-content" id="blog">
-        <h2><i class="fa fa-paper-plane w3-margin-right w3-xxlarge w3-text-black w3-hover-text-grey" style="margin:0 -20px"></i>Blog</h2>
-        <hr class="w3-opacity">
-
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://medium.com/@rnaresh.n/a-wizards-guide-to-adversarial-autoencoders-part-4-classify-mnist-using-1000-labels-2ca08071f95">
-                    <h2 class="w3-xlarge w3-text-dark-grey">A wizard’s guide to Adversarial Autoencoders: Part 4<span style="float: right; font-size: 12px;">August 27th 2017</span></h2>
-                    <p class="description">Classify MNIST using 1000 labels.</p>
-                </a>
-            </div>
+            <p>
+              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
+              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
+            </p>
+          </div>
         </div>
 
-        <br>
+      </div>
+    </section><!-- End About Section -->
 
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://medium.com/towards-data-science/a-wizards-guide-to-adversarial-autoencoders-part-3-disentanglement-of-style-and-content-89262973a4d7">
-                    <h2 class="w3-xlarge w3-text-dark-grey">A wizard’s guide to Adversarial Autoencoders: Part 3<span style="float: right; font-size: 12px;">August 19th 2017</span></h2>
-                    <p class="description">Disentanglement of style and content.</p>
-                </a>
-            </div>
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <br>
+        <div class="row no-gutters">
 
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://medium.com/towards-data-science/a-wizards-guide-to-adversarial-autoencoders-part-2-exploring-latent-space-with-adversarial-2d53a6f8a4f9">
-                    <h2 class="w3-xlarge w3-text-dark-grey">A wizard’s guide to Adversarial Autoencoders: Part 2<span style="float: right; font-size: 12px;">August 7th 2017</span></h2>
-                    <p class="description">Exploring latent space with Adversarial Autoencoders.</p>
-                </a>
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Happy Clients</strong> consequuntur quae</p>
             </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
+            </div>
+          </div>
+
         </div>
 
-        <br>
+      </div>
+    </section><!-- End Facts Section -->
 
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://medium.com/towards-data-science/a-wizards-guide-to-adversarial-autoencoders-part-1-autoencoder-d9a5f8795af4">
-                    <h2 class="w3-xlarge w3-text-dark-grey">A wizard’s guide to Adversarial Autoencoders: Part 1,<span style="float: right; font-size: 12px;">July 31th 2017</span> Autoencoder?</h2>
-                    <p class="description">A simple tensorflow implementation of Autoencoders.</p>
-                </a>
-            </div>
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <br>
+        <div class="row skills-content">
 
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://medium.com/@rnaresh.n/gans-n-roses-c6652d513260">
-                    <h2 class="w3-xlarge w3-text-dark-grey">GANs N' Roses <span style="float: right; font-size: 12px;">June 30th 2017</span></h2>
-                    <p class="description">Uses a Deep Convolutional Generative Adversial Network to generate images of roses using tensorflow.</p>
-                </a>
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">PHP <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WordPress/CMS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Photoshop <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
-    </div>
+      </div>
+    </section><!-- End Skills Section -->
 
-    <!-- Projects -->
-    <div class="w3-content w3-justify w3-padding-32" id="projects">
-        <h2><i class="fa fa-flask fa-fw w3-margin-right w3-xxlarge w3-text-black w3-hover-text-grey" style="margin:0 -20px"></i>Projects</h2>
-        <hr>
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
 
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://github.com/Neural-Dynamics-Lab-VT/Two_Player_Pong">
-                    <h2 class="w3-xlarge w3-text-dark-grey">Multiplayer Pong using alpha brain waves</h2>
-                    <p class="description">Play pong on a local network using a BCI headset.</p>
-                </a>
-            </div>
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <br>
-
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="http://www.vijayan.neuroscience.vt.edu/">
-                    <h2 class="w3-xlarge w3-text-dark-grey">Neural Dynamics Lab Webpage design</h2>
-                    <p class="description">Developed the entire website for Neural dynamics lab at Virginia Tech</p>
-                </a>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>Alex Smith</h4>
+              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+              <ul>
+                <li>Portland par 127,Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
             </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Fine Arts &amp; Graphic Design</h4>
+              <h5>2015 - 2016</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+              <h5>2010 - 2014</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Senior graphic design specialist</h4>
+              <h5>2019 - Present</h5>
+              <p><em>Experion, New York, NY </em></p>
+              <ul>
+                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
+                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Graphic design specialist</h4>
+              <h5>2017 - 2018</h5>
+              <p><em>Stepping Stone Advertising, New York, NY</em></p>
+              <ul>
+                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
+                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <br>
+      </div>
+    </section><!-- End Resume Section -->
 
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://github.com/Naresh1318/Video_Frame_Interpolation">
-                    <h2 class="w3-xlarge w3-text-dark-grey">Video frame interpolation using adversarial learning</h2>
-                    <p class="description">Using cGANs to perform frame rate upsampling.</p>
-                </a>
-            </div>
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <br>
-
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://github.com/Naresh1318/Image2Image">
-                    <h2 class="w3-xlarge w3-text-dark-grey">Image two Image translation using cGANs</h2>
-                    <p class="description">Implementation of Img2Img paper.</p>
-                </a>
-            </div>
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
         </div>
 
-        <br>
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://github.com/Naresh1318/Playing_Atari_the_right_way">
-                    <h2 class="w3-xlarge w3-text-dark-grey">Playing Atari the right way!</h2>
-                    <p class="description">Use adversarial action conditioned video prediction model to help play Breakout.</p>
-                </a>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
             </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <br>
+      </div>
+    </section><!-- End Portfolio Section -->
 
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://github.com/Naresh1318/GANs_N_Roses">
-                    <h2 class="w3-xlarge w3-text-dark-grey">GANs N' Roses</h2>
-                    <p class="description">Uses a Deep Convolutional Generative Adversial Network to generate images of roses using tensorflow.</p>
-                </a>
-            </div>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <br>
-
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://github.com/Naresh1318/DiagnosisPredictor">
-                    <h2 class="w3-xlarge w3-text-dark-grey">Diagnosis Predictor</h2>
-                    <p class="description">Predicts chronic diseases using a patients previous history.</p>
-                </a>
-            </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-briefcase"></i></div>
+            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-bar-chart"></i></div>
+            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-binoculars"></i></div>
+            <h4 class="title"><a href="">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bi bi-brightness-high"></i></div>
+            <h4 class="title"><a href="">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+          </div>
         </div>
 
-        <br>
+      </div>
+    </section><!-- End Services Section -->
 
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://github.com/Naresh1318/ICU_Patient_Mortality">
-                    <h2 class="w3-xlarge w3-text-dark-grey">ICU Patient Deterioration Prediction</h2>
-                    <p class="description">Use artificial neural networks along with various feature selection and extraction algorithms to predict the ICU patient’s mortality.</p>
-                </a>
-            </div>
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <br>
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
 
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://github.com/Naresh1318/Style_Transfer">
-                    <h2 class="w3-xlarge w3-text-dark-grey">AI Video artist</h2>
-                    <p class="description">Converts a video to a style specified by a painting using the vgg16 network.</p>
-                </a>
-            </div>
-        </div>
-
-        <br>
-
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://github.com/Naresh1318/TwitterSentiment">
-                    <h2 class="w3-xlarge w3-text-dark-grey">Twitter Sentiment Analysis</h2>
-                    <p class="description">Analyze the general opinion of a topic among people using the Twitter API and textblob.</p>
-                </a>
-            </div>
-        </div>
-
-        <br>
-
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://github.com/Naresh1318/Effect_of_injected_noise_in_deep_NN">
-                    <h2 class="w3-xlarge w3-text-dark-grey">Effect of Injected Noise in Deep Neural Networks</h2>
-                    <p class="description">Add noise to the operation of a fully connected deep neural network based on the institution from crosstalk in VLSI circuits.</p>
-                </a>
-            </div>
-        </div>
-
-        <br>
-
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://github.com/Naresh1318/Movieclassifier">
-                    <h2 class="w3-xlarge w3-text-dark-grey">Movie Review Classifier</h2>
-                    <p class="description">Classifies a movie as positive or negative based on the reviews written using Logistic Regression.</p>
-                </a>
-            </div>
-        </div>
-
-        <br>
-
-        <br>
-        <br>
-
-        <!-- Publications -->
-        <h2 class="w3-margin-top" style="margin:0 -20px" id="publications"><i class="fa fa-clipboard fa-fw w3-margin-right w3-xxlarge w3-text-black w3-hover-text-grey"></i>Publication</h2>
-        <hr>
-        <div class="w3-container" style="margin:0 -30px">
-            <div class="w3-container w3-hover-shadow w3-round-medium w3-card-2">
-                <a href="https://github.com/Naresh1318/Effect_of_injected_noise_in_deep_NN">
-                    <h2 class="w3-xlarge w3-text-dark-grey">Effect of Injected Noise in Deep Neural Networks</h2>
-                    <p class="description">Naresh Nagabushan, Nishank Sathish, Raghuram S,” Effect of Injected Noise in DeepNeural Networks,” 2016 IEEE International Conference on Computational Intelligenceand Computing Research (ICCIC).</p>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <br>
-
-    <!-- Contact -->
-    <div class="w3-padding-32 w3-content" id="contact">
-        <h2 style="margin:0 -20px"><i class="fa fa-comments-o fa-fw w3-margin-right w3-xxlarge w3-text-black w3-hover-text-grey"></i> Contact</h2>
-        <hr class="w3-opacity"/>
-        <p class="w3-opacity w3-center"><i>Wanna Chat? Drop a note!</i></p>
-        <div class="w3-row w3-padding-32">
-
-            <div class="w3-col m6 w3-large w3-margin-bottom">
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up">
                 <p>
-                    <i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right" style="width:30px"></i> Blacksburg, VA<br>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <p>
-                    <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right" style="width:30px"> </i> Email: rnaresh.n@gmail.com<br>
-                </p>
-            </div>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div><!-- End testimonial item -->
 
-            <div class="w3-col m6">
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
                 <p>
-                    <form action="http://formspree.io/rnaresh.n@gmail.com" target="_blank" method="POST">
-                        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                            <div class="w3-half">
-                                <input class="w3-input w3-border" type="text" placeholder="Name" name="Name">
-                            </div>
-                            <div class="w3-half">
-                                <input class="w3-input w3-border" type="email" placeholder="Email" name="Email">
-                            </div>
-                        </div>
-                        <input class="w3-input w3-border" type="text" placeholder="Message*" name="Message" required>
-                        <button class="w3-section w3-button w3-light-grey w3-padding-large w3-round-large" type="submit">
-                            <i class="fa fa-send"></i> Send
-                        </button>
-                    <p class="w3-opacity w3-right">* Field is required. <br/> &nbsp So, yeah you can be anonymous.</p>
-                    </form>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-            </div>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
     </div>
-    
-    <div style="display:none;">
-    <a href="http://www.clustrmaps.com/map/Naresh1318.github.io" title="Visit tracker for Naresh1318.github.io"><img src="//www.clustrmaps.com/map_v2.png?d=QLZXmB8gTUnBObSP0O2JoAd0cXaME8cM5-74QQePvnA" /></a>
-    </div>
+  </footer><!-- End  Footer -->
 
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge" style="margin:-24px; background: linear-gradient(to bottom right, #EEEEEE, #CCCCCC );">
-        <a href="https://github.com/Naresh1318"><i class="fa fa-github w3-hover-opacity w3-xlarge"></i></a>
-        <a href="https://www.linkedin.com/in/naresh-nagabushan-2946b013a"><i class="fa fa-linkedin w3-hover-opacity w3-xlarge"></i></a>
-        <a href="https://twitter.com/Naresh_Reddy_"><i class="fa fa-twitter w3-hover-opacity w3-xlarge"></i></a>
-        <a href="https://www.facebook.com/rnaresh.n"><i class="fa fa-facebook-official w3-hover-opacity w3-xlarge"></i></a>
-        <br>
-        <p class="w3-small">Copyright (c) 2017 Naresh Nagabushan</p>
-        <!-- End footer -->
-    </footer>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- END PAGE CONTENT -->
-</div>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
-<script>
-
-// Open and close sidebar
-function openNav() {
-    document.getElementById("mySidebar").style.width = "60%";
-    document.getElementById("mySidebar").style.display = "block";
-}
-
-function closeNav() {
-    document.getElementById("mySidebar").style.display = "none";
-}
-
-// Smooth Scroll
-$(document).ready(function(){
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 500, function(){
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-        } // End if
-    });
-});
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " bottom-shadow" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" bottom-shadow w3-animate-top w3-white", "");
-    }
-
-    var navbar = document.getElementById("mySmallNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " bottom-shadow" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" bottom-shadow w3-animate-top w3-white", "");
-    }
-
-}
-
-</script>
 </body>
+
 </html>
