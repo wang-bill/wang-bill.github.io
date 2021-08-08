@@ -1,0 +1,230 @@
+<html>
+<head>
+<style>
+#lVal
+{
+	width:192px;
+	color:red;
+}
+#rVal
+{
+	width:192px;
+	color:blue;
+}
+#center
+{
+	width:128px;
+}
+.weight0
+{
+	font-family:monospace;
+	background-color:#990000;
+}
+.weight1
+{
+	font-family:monospace;
+	background-color:#999999;
+}
+.weight2
+{
+	font-family:monospace;
+	background-color:#000099;
+}
+.select0
+{
+	font-family:monospace;
+	background-color:#ff0000;
+}
+.select1
+{
+	font-family:monospace;
+	background-color:#ffffff;
+}
+.select2
+{
+	font-family:monospace;
+	background-color:#0000ff;
+}
+</style>
+<script type="text/javascript">
+function sign(x)
+{
+	if (x == 0)
+		return 0;
+	return (x / Math.abs(x));
+}
+function t(x)
+{
+	return (pow3(x) - 1) / 2;
+}
+function pow3(x)
+{
+	return Math.pow(3, x);
+}
+function randInt(a, b)
+{
+	return (a + Math.floor(Math.random() * (b - a + 1)))
+}
+function update()
+{
+	document.getElementById("lVal").innerHTML = "Left: X + " + (lVal - x);
+	document.getElementById("rVal").innerHTML = "Right: " + rVal;
+	if (lVal > rVal)
+	{
+		document.getElementById("result").src = "left.png";
+		document.getElementById("result").alt = "Left is heavier!";
+		return;
+	}
+	if (lVal < rVal)
+	{
+		document.getElementById("result").src = "right.png";
+		document.getElementById("result").alt = "Right is heavier!";
+		return;
+	}
+	if (lVal == rVal)
+	{
+		document.getElementById("result").src = "equal.png";
+		document.getElementById("result").alt = "It's balanced!";
+		initDisable();
+	}
+}
+function putWeight(a, p, adv)
+{
+	if (w[a] != p || !adv)
+		switch (p)
+		{
+			case 0:
+				lVal += v[a];
+				break;
+			case 1:
+				break;
+			case 2:
+				rVal += v[a];
+				break;
+		}
+	document.getElementById(a + "." + w[a]).className = "weight" + w[a];
+	if (adv)
+		if ((w[a] == p) && (p != 1 || (p == 1 && lVal != rVal)))
+		{
+			if (p == 1)
+				m = sign(lVal - rVal) + 1;
+			else
+				m = 1;
+			putWeight(a, m);
+			p = m;
+			w[a] = p;
+			update();
+			return;
+		}
+			switch (w[a])
+		{
+			case 0:
+				lVal -= v[a];
+				break;
+			case 2:
+				rVal -= v[a];
+				break;
+		}
+	document.getElementById(a + "." + p).className = "select" + p;
+	w[a] = p;
+	update();
+}
+function putAllWeights(a, p, adv)
+{
+	for (i = 0; i <= a; i++)
+		putWeight(i, p, adv);
+}
+function check()
+{
+	if (document.getElementById("guess").value == x)
+		alert("You got it!");
+	else
+		alert("Try again!");
+}
+function reset()
+{
+	for (i = 0; i < n; i++)
+	{
+			document.getElementById(i + ".0").disabled = false;
+			document.getElementById(i + ".0").className = "weight0";
+			document.getElementById(i + ".1").disabled = false;
+			document.getElementById(i + ".1").className = "select1";
+			document.getElementById(i + ".2").disabled = false;
+			document.getElementById(i + ".2").className = "weight2";
+			w[i] = 1;
+	}
+	x = randInt(1, t(n));
+	lVal = x;
+	rVal = 0;
+	document.getElementById("result").src = "left.png";
+	document.getElementById("result").alt = "Left is heavier!";
+	document.getElementById("guess").value = "";
+	update();
+}
+function initDisable()
+{
+	for (i = 0; i < n; i++)
+	{
+		document.getElementById(i + ".0").disabled = true;
+		document.getElementById(i + "x0").disabled = true;
+		document.getElementById(i + ".1").disabled = true;
+		document.getElementById(i + "x1").disabled = true;
+		document.getElementById(i + ".2").disabled = true;
+		document.getElementById(i + "x2").disabled = true;
+	}
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+n = 13; //difficulty
+help = "Objective: Find the value of the weight marked X. Its weight can be anywhere from 1 to " + t(n) + ". Do this by moving the " + n + " numbered weights you have available. The balance may tip accordingly. When you think you have deduced how much the object X weighs, enter your guess at the bottom and see if you are right! For assistance the total weight on each side will also be displayed."
+v = new Array(n);
+w = new Array(n);
+game = document.getElementById("game");
+for (i = 0; i < n; i++)
+{
+	w[i] = 1;
+	v[i] = pow3(i);
+}
+x = randInt(1, t(n));
+lVal = x;
+rVal = 0;
+document.write("<table align=center border=2 id=game>");
+document.write("<tr align=center><th colspan=6 align=center width=512>");
+document.write("(This game was made by Ankan Bhattacharya, I am just hosting it here for fun.)");
+document.write("\n");
+document.write(help);
+document.write("</th></tr>");
+
+document.write("<tr><th align=center colspan=6>")
+document.write("X = <input id=guess type=text size=6 /> <input id=check type=button value='Check!' onclick='javascript:check()' />");
+document.write("</th></tr>")
+
+document.write("<tr align=center><th><input class=select0 type=button value=X disabled /></th><th></th><th colspan=4><input type=button value='New Game!' onclick='javascript:reset()' /></th></tr>");
+for (i = 0; i < n; i++)
+{
+	document.write("<tr align=center valign=center>");
+	document.write("<td><input class=weight0 id='" + i + ".0' type=button value=" + v[i] + " onclick='javascript:putWeight(" + i + ", 0, true)' /></td>");
+	document.write("<td><input class=select0 id='" + i + "x0' type=button value='^' onclick='javascript:putAllWeights(" + i + ", 0, false)' />");
+	document.write("<td><input class=select1 id='" + i + ".1' type=button value=" + v[i] + " onclick='javascript:putWeight(" + i + ", 1, true)' /></td>");
+	document.write("<td><input class=select1 id='" + i + "x1' type=button value='^' onclick='javascript:putAllWeights(" + i + ", 1, false)' />");
+	document.write("<td><input class=weight2 id='" + i + ".2' type=button value=" + v[i] + " onclick='javascript:putWeight(" + i + ", 2, true)' /></td>");
+	document.write("<td><input class=select2 id='" + i + "x2' type=button value='^' onclick='javascript:putAllWeights(" + i + ", 2, false)' />");
+	document.write("</tr>");
+}
+
+document.write("<tr align=center>");
+document.write("<td colspan=2 id=lVal>Left: X + " + (lVal - x) + "</td>");
+document.write("<td colspan=2 id=center></td>");
+document.write("<td colspan=2 id=rVal>Right: " + rVal + "</td>");
+document.write("</tr>");
+
+document.write("<tr align=center><td colspan=6>");
+document.write("<img id=result src='Left.png' width=512 height=64 alt='Left is heavier!' />");
+document.write("</td></tr>");
+
+document.write("</table>");
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="school.css">
+    <title>School Stuff</title>
+    <!-- Conditionally load WC polyfills -->
+    <!-- Thanks to https://github.com/geelen/x-gif for the snippet -->
+    <script>if (!('registerElement' in document
+      && 'createShadowRoot' in HTMLElement.prototype
+      && 'import' in document.createElement('link')
+      && 'content' in document.createElement('template'))) {
+            document.write('<script src="/bower_components/webcomponentsjs/webcomponents.min.js"><\/script>');
+      }</script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/src/html-include.js"></script>
+  </head>
+  <body>
+    <div id="content-wrapper">
+    <html-include src="header.html"></html-include>
+    <br /><br />
+    <div id="page-content">
+      <h1>School Work</h1>
+      <h2>Notes</h2>
+      <ol>
+        <li>Academic Notes (<a href="Handouts/Academic_Notes.pdf"><div class="twoltip">PDF Version<span class="tooltiptext"></span></div></a>)</li>
+        My notes taken for the classes I took in 9th grade during the last term of the year. I was able to complete this due to COVID-19. Have fun reading!
+      </ol>
+      <h2>Subject Materials</h2>
+      <h3>General</h3>
+      <ol>
+        <li>AP Exam Day Checklist (<a href="https://apcentral.collegeboard.org/pdf/ap-student-exam-day-checklist.pdf">PDF Version</a>)</li>
+        A link to the AP Exam Checklist. Make sure to look at it!
+      </ol>
+      <h3>Computer Science</h3>
+      Information/practice regarding the AP CS Exam. I am taking this is in 2020, so I am only taking the FRQ portion. Have fun studying!
+      <ol>
+        <li>FRQ Sheet (<a href="Handouts/CSA-frq-blankPage.pdf"><div class="twoltip">PDF Version<span class="tooltiptext"></span></div></a>)</li>
+        This is the sheet you would have used for the AP CSA FRQ had COVID-19 not occured. Still good for reference (and if you are handwriting, use this sheet!).
+        <li>2019 AP CSA FRQ (<a href="Handouts/CSA-2019-CED-FRQs-quesOnly.pdf"><div class="twoltip">PDF Version<span class="tooltiptext"></span></div></a>)</li>
+        These are the 2019 AP CSA FRQs. Try them! 
+        <li>CSA Exam Notes (<a href="Handouts/CSA_Exam_2020_Info______JW_notes.pdf"><div class="twoltip">PDF Version<span class="tooltiptext"></span></div></a>)</li>
+        Made by Jill Westerlund; a few notes on the CS Exam this year. 
+        <li>AP CSA Do's and Don't's (<a href="Handouts/Dos_and_Donts-converted.pdf"><div class="twoltip">PDF Version<span class="tooltiptext"></span></div></a>) (<a href="Handouts/Dos and Donts KEY.pdf"><div class="twoltip">Answer Key<span class="tooltiptext"></span></div></a>)</li>
+        A good practice for the AP CS Exam. The answer key is also attached.
+        <li>AP CSA Exam Resource (<a href="Handouts/AP Computer Science A Exam Resource.pdf"><div class="twoltip">PDF Version<span class="tooltiptext"></span></div></a>)</li>
+        A nice list of things to know for the AP CSA Exam.
+      </ol>
+    </div>
+    <html-include src="footer.html"></html-include>
+  </div>
+  </body>
+</html>

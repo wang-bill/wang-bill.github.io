@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>About Me</title>
+    <!-- Conditionally load WC polyfills -->
+    <!-- Thanks to https://github.com/geelen/x-gif for the snippet -->
+    <script>if (!('registerElement' in document
+      && 'createShadowRoot' in HTMLElement.prototype
+      && 'import' in document.createElement('link')
+      && 'content' in document.createElement('template'))) {
+            document.write('<script src="bower_components/webcomponentsjs/webcomponents.min.js"><\/script>');
+      }</script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="src/html-include.js"></script>
+  </head>
+  <body>
+    <div id="content-wrapper">
+    <html-include src="aboutheader.html"></html-include>
+    <br /><br />
+    <div id="page-content">
+      <h1>About Me</h1>
+      Hello! My name is Dylan, and I have an interest in many subjects, including: 
+      <ol>
+        <li>Mathematics: My first love - it's fun to play with numbers, and even more fun to write about them!</li>
+        <div style="text-align: center"><img src="mandelbrot.jpg" width="250px"></img></div>
+        <div style="text-align: center"><i>This is the Mandelbrot set, a beautiful result of complex numbers.</i></div>
+        <li>Physics: My favorite scientist of all time is Richard Feynman. Check out his artwork, it's great!</li>
+        <div style="text-align: center"><img src="feynman_painting.jpg" width="250px"></img></div>
+        <div style="text-align: center"><i>This is a painting by Richard Feynman, who I admire a lot.</i></div>
+        <li>Computer Science: CS is extremely versatile, and it's what helped make this website!</li>
+        <div style="text-align: center"><img src="mark_I.jpg" width="250px"></img></div>
+        <div style="text-align: center"><i>This is the Mark I invented by Grace Hopper, which I actually saw at Harvard University.</i></div>
+        <li>Economics: Slowly converting my stocks to bonds (just kidding, I don't have any of either).</li>
+        <div style="text-align: center"><img src="monopoly.jpg" width="250px"></img></div>
+        <div style="text-align: center"><i>This is (what I presume to be) the economist's favorite game: Monopoly!</i></div>
+      </ol>
+    </div>
+    <html-include src="footer.html"></html-include>
+  </div>
+  </body>
+</html>
