@@ -10,7 +10,7 @@
 .navbar {
     margin: 0 auto; /* This should centre a block element */
    /* display: inline-block; Remove this, it should be a block */
-   /* width: 100%; Remove this too, a block will be full width by default. 100% makes it wdier and makes a scroll bar */
+    /*width: 100%; Remove this too, a block will be full width by default. 100% makes it wdier and makes a scroll bar */
     text-align: center;
 }
  
