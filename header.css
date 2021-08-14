@@ -2,7 +2,7 @@
 
 #header-navbar {
   font-family: 'Baloo Chettan 2', cursive;
-  background-color: #9b9be5;
+  background-color: #000000;
   width: 100%;
 	font-size: 24px;
 }
@@ -25,7 +25,8 @@
 }
 
 .button {
-      background-color: #70fff4;
+      border-radius: 9px;
+      background-color: #ffffff;
       border: none;
       color: black;
       padding: 16px 32px;
