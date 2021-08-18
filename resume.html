@@ -1,124 +1,173 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="lambda.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="_global.css">
     <link rel="stylesheet" type="text/css" href="resume.css">
     <title>Resume</title>
-    <!-- Conditionally load WC polyfills -->
-    <!-- Thanks to https://github.com/geelen/x-gif for the snippet -->
-    <script>if (!('registerElement' in document
-      && 'createShadowRoot' in HTMLElement.prototype
-      && 'import' in document.createElement('link')
-      && 'content' in document.createElement('template'))) {
-            document.write('<script src="bower_components/webcomponentsjs/webcomponents.min.js"><\/script>');
-      }</script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="header.css">
-    <nav id="header-navbar" class="navbar navbar-default">
+</head>
+<body>
+<nav id="header-navbar" class="navbar navbar-default">
     <div id="header-content">
-      <div style="float: left;">
-          <!--<img src="learning tree.png" width="125px"></img>-->
-          <a href="https://wang-bill.github.io"><button class="button">Main Page</button></a>
-          <a href="https://wang-bill.github.io/about.html"><button class="button">About</button></a>
-          <a href="https://wang-bill.github.io/resume.html"><button class="button"><b>Resume</b></button>
-          <a href="https://wang-bill.github.io/teaching.html"><button class="button">Teaching</button></a>
-          <a href="https://wang-bill.github.io/projects.html"><button class="button">Projects</button></a>
-          <a href="https://wang-bill.github.io/blog.html"><button class="button">Blog</button></a>
-          <a href="https://wang-bill.github.io/contact.html"><button class="button">Contact</button></a>
-          
-          
-      </div>
-      <div style="float:right; margin-right: 45px; vertical-align:middle; line-height: 71px">
-        Quote
-      <div style="clear: both;"></div>
+        <div style="float: left;">
+            <img src="lambda.png" width="60px" alt="logo"/>
+            <a href="/">
+                <button class="button">Main Page</button>
+            </a>
+            <a href="/about">
+                <button class="button">About</button>
+            </a>
+            <a href="/resume">
+                <button class="button">Resume</button>
+            </a>
+            <a href="/teaching">
+                <button class="button">Teaching</button>
+            </a>
+            <a href="/projects">
+                <button class="button">Projects</button>
+            </a>
+            <a href="/blog">
+                <button class="button">Blog</button>
+            </a>
+            <a href="/contact">
+                <button class="button">Contact</button>
+            </a>
+        </div>
+        <div style="float:right; margin-right: 45px; vertical-align:middle; line-height: 71px">
+            Quote
+            <div style="clear: both;"></div>
+        </div>
     </div>
+    <div class="dropdown nav-drop">
+        <img src="lambda.png" width="60px" alt="logo" style="margin: 5px;"/>
+
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="true" style="width: 100%">
+            <span class="glyphicon glyphicon-menu-hamburger" style="top: -2px;left: -7px;" aria-hidden="true"></span>
+            <span class="h2">Menu</span>
+        </button>
+        <ul id="navul" class="dropdown-menu" aria-labelledby="dropdownMenu1" style="width: 100%"></ul>
+    </div>
+
+    <script>
+        (function () {
+            Array.from(document.querySelectorAll("nav a")).forEach(a => {
+                if (a.href === location.href) {
+                    a.classList.add('active');
+                    document.querySelector("ul#navul").innerHTML += `<li><a class="active" href="${a.href}">${a.innerText}</a></li>`
+
+                } else {
+                    document.querySelector("ul#navul").innerHTML += `<li><a href="${a.href}">${a.innerText}</a></li>`
+                }
+            })
+        })();
+    </script>
 </nav>
-  </head>
-  <body>
-    <div id="content-wrapper">
-    <html-include src="aboutheader.html"></html-include>
-    <br /><br />
+
+
+<div id="content-wrapper">
     <div id="page-content">
-      <h1><b>Education</b></h1>
+        <h1>Education</h1>
+        <div class="group">
+            <h3>Massachusetts Institute of Technology, Cambridge, Massachusetts</h3>
+            <p>Electrical Engineering and Computer Science</p>
+            <p>Diploma expected 2025</p>
+            <h3>A&M Consolidated High School, College Station, Texas</h3>
+            <p>Summa Cum Laude Graduate</p>
+            <p>Diploma received 2021</p>
+        </div>
+        <h1>Research Lab Experience</h1>
+        <div class="group">
+            <h3>Texas A&M Experimental Solid Mechanics Lab (2019 - 2020)</h3>
+            <p>Intern</p>
+            <ul>
+                <li><p>Designed a setup for in-situ UV-vis spectrophotometry during mechanical testing</p></li>
+                <li><p>Fabricated several platinum-cured elastomers, under Dr. Pharr</p></li>
+                <li><p>Modeled machines for polymer stretch testing thorugh Solidworks</p></li>
+                <li><p>Presented research at Junior Science and Humanities Symposium (Semi-finalist), and Science Fair
+                    (State finalist)</p></li>
+            </ul>
+
+            <h3>Summer Science Program (Summer 2020)</h3>
+            <p>Researcher</p>
+            <ul>
+                <li><p>Chosen as one of 144 participants (out of 1402) for the Astrophysics program</p></li>
+                <li><p>Performed Research on Near-Earth Asteroid 2011XZ1</p></li>
+                <li><p>Submitted research to the Minor Planet Center</p></li>
+            </ul>
+        </div>
+        <h1>Work Experience</h1>
+        <div class="group">
+            <h3>Awesome Math Summer Program</h3>
+            <ul>
+                <li><p>Awesome Math is a summer program for advanced middle and high schoolers to develop their
+                    competitive mathematics skills</p></li>
+                <li><p>Worked with instructor in developing content and problem sets for advanced Number Theory,
+                    Combinatorics, and Algebra courses</p></li>
+            </ul>
+            <h3>Private tutoring</h3>
+            <ul>
+                <li><p>Taught a total of ten students (including group and private classes) material in preparation for
+                    the physics and mathematics olympiads</p></li>
+                <li><p>Developed original lecture and homework material</p></li>
+            </ul>
+            <h3>MYMA Calculus Textbook</h3>
+            <ul>
+                <li><p>Used LaTex, Asymptote, and Maple to write the MYMA Calculus textbook</p></li>
+                <li><p>Chosen as a teacher to teach Maple proramming to middle schooler students</p></li>
+                <li><p>Edited exercises and content, under Dr. Yasskin (Texas A&M)</p></li>
+            </ul>
+        </div>
+        <h1>Achievements and Awards</h1>
         <ul>
-          <h3>Massachusetts Institute of Technology, Cambridge, Massachusetts</h3>
-          <h4>Electrical Engineering and Computer Science</h4>
-          <h4>Diploma expected 2025</h4>
-          <h3>A&M Consolidated High School, College Station, Texas</h3>
-          <h4>Summa Cum Laude Graduate</h4>
-          <h4>Diploma received 2021</h4>
+            <li><p>USA Computing Olympiad Platinum Division</p></li>
+            <li><p>Two-time USA Mathematics Olympiad Qualifier</p></li>
+            <li><p>Two-time USA Physics Olympiad Semi-finalist</p></li>
         </ul>
-      <h1><b>Research Lab Experience</b></h1>
-        <ul>
-          <h3>Texas A&M Experimental Solid Mechanics Lab (2019 - 2020)</h3>
-          <h4>Intern</h4>
+        <h1>Skills</h1>
+        <div class="group">
+            <h3>Programming/Laboratory Research</h3>
             <ul>
-              <li><h4>Designed a setup for in-situ UV-vis spectrophotometry during mechanical testing</h4></li>
-              <li><h4>Fabricated several platinum-cured elastomers, under Dr. Pharr</h4></li>
-              <li><h4>Modeled machines for polymer stretch testing thorugh Solidworks</h4></li>
-              <li><h4>Presented research at Junior Science and Humanities Symposium (Semi-finalist), and Science Fair (State finalist)</h4></li>
+                <li><p>Python, C++, Java</p></li>
+                <li><p>Python packages - Pandas, matplotlib, numpy, astropy</p></li>
+
             </ul>
-          
-          <h3>Summer Science Program (Summer 2020)</h3>
-          <h4>Researcher</h4>
+            <h3>Languages</h3>
             <ul>
-              <li><h4>Chosen as one of 144 participants (out of 1402) for the Astrophysics program</h4></li>
-              <li><h4>Performed Research on Near-Earth Asteroid 2011XZ1</h4></li>
-              <li><h4>Submitted research to the Minor Planet Center</h4></li>
+                <li><p>English (Native language)</p></li>
+                <li><p>Mandarin (Fluent)</p></li>
+                <li><p>French (Intermediate)</p></li>
             </ul>
-        </ul>
-      <h1><b>Work Experience</b></h1>
-        <ul>
-          <h3>Awesome Math Summer Program</h3>
+            <h3>Computer Aided Design</h3>
             <ul>
-              <li><h4>Awesome Math is a summer program for advanced middle and high schoolers to develop their competitive mathematics skills</h4></li>
-              <li><h4>Worked with instructor in developing content and problem sets for advanced Number Theory, Combinatorics, and Algebra courses</h4></li>
-            </ul>  
-          <h3>Private tutoring</h3>
-            <ul>
-              <li><h4>Taught a total of ten students (including group and private classes) material in preparation for the physics and mathematics olympiads</h4></li>
-              <li><h4>Developed original lecture and homework material</h4></li>
+                <li><p>Solidworks</p></li>
             </ul>
-          <h3>MYMA Calculus Textbook</h3>
-            <ul>
-              <li><h4>Used LaTex, Asymptote, and Maple to write the MYMA Calculus textbook</h4></li>
-              <li><h4>Chosen as a teacher to teach Maple proramming to middle schooler students</h4></li>
-              <li><h4>Edited exercises and content, under Dr. Yasskin (Texas A&M)</h4></li>
-            </ul>
-        </ul>
-      <h1><b>Achievements and Awards</b></h1>
-        <ul>
-          <li><h4>USA Computing Olympiad Platinum Division</h4></li>
-          <li><h4>Two-time USA Mathematics Olympiad Qualifier</h4></li>
-          <li><h4>Two-time USA Physics Olympiad Semi-finalist</h4></li>
-        </ul>
-      <h1><b>Skills</b></h1>
-        <ul>
-          <h3>Programming/Laboratory Research</h3>  
-            <ul>
-              <li><h4>Python, C++, Java</h4></li>
-              <li><h4>Python packages - Pandas, matplotlib, numpy, astropy</h4></li>
-              
-            </ul>
-          <h3>Languages</h3>
-            <ul>
-              <li><h4>English (Native language)</h4></li>
-              <li><h4>Mandarin (Fluent)</h4></li>
-              <li><h4>French (Intermediate)</h4></li>
-            </ul>
-          <h3>Computer Aided Design</h3>
-            <ul>
-              <li><h4>Solidworks</h4></li>
-            </ul>
-        </ul>
+        </div>
     </div>
-    <hr>
-<div class="container">
-  <p>Email me at <a href="mailto:wangbill@mit.edu">wangbill@mit.edu</a></p>
 </div>
-<hr>
-  </div>
-  </body>
+<div class="footer">
+    <p>Email me at <a href="mailto:wangbill@mit.edu">wangbill@mit.edu</a></p>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+
+</body>
 </html>
