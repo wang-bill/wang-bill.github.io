@@ -1,8 +1,10 @@
-  
 <!DOCTYPE html>
-<html>
-  
-  <head>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="lambda.png">
     <link rel="manifest" href="/site.webmanifest">
@@ -11,48 +13,113 @@
     <meta name="theme-color" content="#ffffff">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <title>Bill Wang</title>
-    <!-- Conditionally load WC polyfills -->
-    <!-- Thanks to https://github.com/geelen/x-gif for the snippet -->
-    <script>if (!('registerElement' in document
-      && 'createShadowRoot' in HTMLElement.prototype
-      && 'import' in document.createElement('link')
-      && 'content' in document.createElement('template'))) {
-            document.write('<script src="bower_components/webcomponentsjs/webcomponents.min.js"><\/script>');
-      }</script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <script src="src/html-include.js"></script>
-  </head>
-  <body>
-    <div id="content-wrapper">
-      <link rel="stylesheet" type="text/css" href="header.css">
-      <nav id="header-navbar" class="navbar navbar-default">
-        <div id="header-content">
-          <div style="float: left;">
-              <a href="https://wang-bill.github.io"><button class="button">Main Page</button></a>
-              <a href="https://wang-bill.github.io/about.html"><button class="button">About</button></a>
-              <a href="https://wang-bill.github.io/resume.html"><button class="button">Resume</button>
-              <a href="https://wang-bill.github.io/teaching.html"><button class="button">Teaching</button></a>
-              <a href="https://wang-bill.github.io/projects.html"><button class="button">Projects</button></a>
-              <a href="https://wang-bill.github.io/blog.html"><button class="button"><b>Blog</b></button></a>
-              <a href="https://wang-bill.github.io/contact.html"><button class="button">Contact</button></a>
-          </div>
-          <div style="float:right; margin-right: 45px; vertical-align:middle; line-height: 71px">
-            Quote
-          <div style="clear: both;"></div>
+    <link rel="stylesheet" type="text/css" href="_global.css">
+    <title>Bill Wang</title>
+</head>
+<body>
+<nav id="header-navbar" class="navbar navbar-default">
+    <div id="header-content">
+        <div style="float: left;">
+            <img src="lambda.png" width="60px" alt="logo"/>
+            <a href="/">
+                <button class="button">Main Page</button>
+            </a>
+            <a href="/about">
+                <button class="button">About</button>
+            </a>
+            <a href="/resume">
+                <button class="button">Resume</button>
+            </a>
+            <a href="/teaching">
+                <button class="button">Teaching</button>
+            </a>
+            <a href="/projects">
+                <button class="button">Projects</button>
+            </a>
+            <a href="/blog">
+                <button class="button">Blog</button>
+            </a>
+            <a href="/contact">
+                <button class="button">Contact</button>
+            </a>
         </div>
-      </nav>
-    <br /><br />
-    <div id="page-content">
-      <h1>Coming soon!</h1>
+        <div style="float:right; margin-right: 45px; vertical-align:middle; line-height: 71px">
+            Quote
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <div class="dropdown nav-drop">
+        <img src="lambda.png" width="60px" alt="logo" style="margin: 5px;"/>
 
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="true" style="width: 100%">
+            <span class="glyphicon glyphicon-menu-hamburger" style="top: -2px;left: -7px;" aria-hidden="true"></span>
+            <span class="h2">Menu</span>
+        </button>
+        <ul id="navul" class="dropdown-menu" aria-labelledby="dropdownMenu1" style="width: 100%"></ul>
     </div>
-    <hr>
-    <div class="container">
-      <p>Email me at <a href="mailto:wangbill@mit.edu">wangbill@mit.edu</a></p>
+
+    <script>
+        (function () {
+            Array.from(document.querySelectorAll("nav a")).forEach(a => {
+                if (a.href === location.href) {
+                    a.classList.add('active');
+                    document.querySelector("ul#navul").innerHTML += `<li><a class="active" href="${a.href}">${a.innerText}</a></li>`
+
+                } else {
+                    document.querySelector("ul#navul").innerHTML += `<li><a href="${a.href}">${a.innerText}</a></li>`
+                }
+            })
+        })();
+    </script>
+</nav>
+
+
+
+<div id="content-wrapper">
+    <div class="collapsible">
+        <h2 data-toggle="collapse" data-target="#bp1">
+            Blog Post 1
+        </h2>
+        <div id="bp1" class="collapse">
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+        </div>
     </div>
-    <hr>
-  </div>
-  </body>
+    <div class="collapsible">
+        <h2 data-toggle="collapse" data-target="#bp2">
+            Blog Post 2
+        </h2>
+        <div id="bp2" class="collapse">
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>Email me at <a href="mailto:wangbill@mit.edu">wangbill@mit.edu</a></p>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+</body>
 </html>
