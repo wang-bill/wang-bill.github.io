@@ -18,16 +18,12 @@
       border-radius: 4px;
   }
   
-  .radio-toolbar label:hover {
-    background-color: #dfd;
+  .radio-toolbar label[for = "Correct"] {
+    background-color: #bfb;
+    border-color: #4c4;
   }
-  
-  .radio-toolbar input[type="radio"]:focus + label {
-      border: 2px dashed #444;
+
+  .radio-toolbar label[for = "Incorrect"] {
+    background-color: rgb(219, 72, 27);
+    border-color: red;
   }
-  
-  .radio-toolbar input[type="radio"]:checked + label {
-      background-color: #bfb;
-      border-color: #4c4;
-  }
-  
