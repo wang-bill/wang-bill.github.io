@@ -1,316 +1,401 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Fermi Quiz</title>
-    <link rel="stylesheet" type = "text/css" href="fermiconc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="lambda.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fermiconc.css">
     <script type = "text/javascript" src = "fermi.js"></script>
+    <title>Bill Wang</title>
 </head>
 <body onload = "loadAnswers()">
-<form name = "quiz" id = "quiz">
-    <div id =  "q1" class = "radio-toolbar">
-        <p>How many seconds are there in a year?</p>
-        <input type="radio" id="1A" name = "n1" value = "2">
-        <label for = "Incorrect">2</label>
-        <input type="radio" id="1B" name = "n1" value = "4">
-        <label for = "Incorrect">4</label>
-        <input type="radio" id="1C" name = "n1" value = "7">
-        <label for = "Correct">7</label>
-        <input type="radio" id="1D" name = "n1" value = "17">
-        <label for = "Incorrect">17</label>
+<nav id="header-navbar" class="navbar navbar-default">
+    <div id="header-content">
+        <div style="float: left;">
+            <img src="lambda.png" width="60px" alt="logo"/>
+            <a href="/">
+                <button class="button">Main Page</button>
+            </a>
+            <a href="/about">
+                <button class="button">About</button>
+            </a>
+            <a href="/resume">
+                <button class="button">Resume</button>
+            </a>
+            <a href="/teaching">
+                <button class="button">Teaching</button>
+            </a>
+            <a href="/projects">
+                <button class="button">Projects</button>
+            </a>
+            <a href="/blog">
+                <button class="button">Blog</button>
+            </a>
+            <a href="/contact">
+                <button class="button">Contact</button>
+            </a>
+        </div>
+        <div style="float:right; margin-right: 45px; vertical-align:middle; line-height: 71px">
+            Quote
+            <div style="clear: both;"></div>
+        </div>
     </div>
-    
-    <div id =  "q2" class = "radio-toolbar">
-        <p>How many miles are there in a light-year?</p>
-        <input type="radio" id="2A" name = "n2" value = "3">
-        <label for = "Incorrect">3</label>
-        <input type="radio" id="2B" name = "n2" value = "8">
-        <label for = "Incorrect">8</label>
-        <input type="radio" id="2C" name = "n2" value = "13">
-        <label for = "Correct">13</label>
-        <input type="radio" id="2D" name = "n2" value = "23">
-        <label for = "Incorrect">23</label>
-    </div>
-    
-    <div id =  "q3" class = "radio-toolbar">
-        <p>How many kilometers are there in a light-year?</p>
-        <input type="radio" id="3A" name = "n3" value = "3">
-        <label for = "Incorrect">3</label>
-        <input type="radio" id="3B" name = "n3" value = "8">
-        <label for = "Incorrect">8</label>
-        <input type="radio" id="3C" name = "n3" value = "13">
-        <label for = "Correct">13</label>
-        <input type="radio" id="3D" name = "n3" value = "23">
-        <label for = "Incorrect">23</label>
-    </div>
-    
-    <div id =  "q4" class = "radio-toolbar">
-        <p>For the average American woman, how many times will her heart beat during her lifetime?</p>
-        <input type="radio" id="4A" name = "n4" value = "4">
-        <label for = "Incorrect">4</label>
-        <input type="radio" id="4B" name = "n4" value = "6">
-        <label for = "Incorrect">6</label>
-        <input type="radio" id="4C" name = "n4" value = "9">
-        <label for = "Correct">9</label>
-        <input type="radio" id="4D" name = "n4" value = "19">
-        <label for = "Incorrect">19</label>
-    </div>
-    
-    <div id =  "q5" class = "radio-toolbar">
-        <p>How many heartbeats are there in a year for the entire world's population?</p>
-        <input type="radio" id="5A" name = "n5" value = "12">
-        <label for = "Incorrect">12</label>
-        <input type="radio" id="5B" name = "n5" value = "17">
-        <label for = "Correct">17</label>
-        <input type="radio" id="5C" name = "n5" value = "27">
-        <label for = "Incorrect">27</label>
-        <input type="radio" id="5D" name = "n5" value = "47">
-        <label for = "Incorrect">47</label>
-    </div>
-    
-    <div id =  "q6" class = "radio-toolbar">
-        <p>How many pounds of rice were consumed in the U.S. in the year 2001?</p>
-        <input type="radio" id="6A" name = "n6" value = "-10">
-        <label for = "Incorrect">-10</label>
-        <input type="radio" id="6B" name = "n6" value = "0">
-        <label for = "Incorrect">0</label>
-        <input type="radio" id="6C" name = "n6" value = "5">
-        <label for = "Incorrect">5</label>
-        <input type="radio" id="6D" name = "n6" value = "10">
-        <label for = "Correct">10</label>
-    </div>
-    
-    <div id =  "q7" class = "radio-toolbar">
-        <p>What is the density of butter in g/cc?</p>
-        <input type="radio" id="7A" name = "n7" value = "0">
-        <label for = "Correct">0</label>
-        <input type="radio" id="7B" name = "n7" value = "5">
-        <label for = "Incorrect">5</label>
-        <input type="radio" id="7C" name = "n7" value = "7">
-        <label for = "Incorrect">7</label>
-        <input type="radio" id="7D" name = "n7" value = "10">
-        <label for = "Incorrect">10</label>
-    </div>
-    
-    <div id =  "q8" class = "radio-toolbar">
-        <p>What fraction of a mile is a cm?</p>
-        <input type="radio" id="8A" name = "n8" value = "-25">
-        <label for = "Incorrect">-25</label>
-        <input type="radio" id="8B" name = "n8" value = "-15">
-        <label for = "Incorrect">-15</label>
-        <input type="radio" id="8C" name = "n8" value = "-10">
-        <label for = "Incorrect">-10</label>
-        <input type="radio" id="8D" name = "n8" value = "-5">
-        <label for = "Correct">-5</label>
-    </div>
-    
-    <div id =  "q9" class = "radio-toolbar">
-        <p>What is the area, in sq. miles, of the original 48 states of the U.S.?</p>
-        <input type="radio" id="9A" name = "n9" value = "1">
-        <label for = "Incorrect">1</label>
-        <input type="radio" id="9B" name = "n9" value = "3">
-        <label for = "Incorrect">3</label>
-        <input type="radio" id="9C" name = "n9" value = "6">
-        <label for = "Correct">6</label>
-        <input type="radio" id="9D" name = "n9" value = "16">
-        <label for = "Incorrect">16</label>
-    </div>
-    
-    <div id =  "q10" class = "radio-toolbar">
-        <p>What is the area of the U.S. in cm^2?</p>
-        <input type="radio" id="10A" name = "n10" value = "12">
-        <label for = "Incorrect">12</label>
-        <input type="radio" id="10B" name = "n10" value = "17">
-        <label for = "Correct">17</label>
-        <input type="radio" id="10C" name = "n10" value = "27">
-        <label for = "Incorrect">27</label>
-        <input type="radio" id="10D" name = "n10" value = "47">
-        <label for = "Incorrect">47</label>
-    </div>
-    
-    <div id =  "q11" class = "radio-toolbar">
-        <p>What is the area of Lake Superior in sq. miles?</p>
-        <input type="radio" id="11A" name = "n11" value = "4">
-        <label for = "Correct">4</label>
-        <input type="radio" id="11B" name = "n11" value = "9">
-        <label for = "Incorrect">9</label>
-        <input type="radio" id="11C" name = "n11" value = "11">
-        <label for = "Incorrect">11</label>
-        <input type="radio" id="11D" name = "n11" value = "14">
-        <label for = "Incorrect">14</label>
-    </div>
-    
-    <div id =  "q12" class = "radio-toolbar">
-        <p>Estimate the volume of Lake Superior in cubic kilometers</p>
-        <input type="radio" id="12A" name = "n12" value = "4">
-        <label for = "Correct">4</label>
-        <input type="radio" id="12B" name = "n12" value = "9">
-        <label for = "Incorrect">9</label>
-        <input type="radio" id="12C" name = "n12" value = "11">
-        <label for = "Incorrect">11</label>
-        <input type="radio" id="12D" name = "n12" value = "14">
-        <label for = "Incorrect">14</label>
-    </div>
-    
-    <div id =  "q13" class = "radio-toolbar">
-        <p>How many cubic kilometers of rain fall of the U.S. (48 original states) in one year?</p>
-        <input type="radio" id="13A" name = "n13" value = "3">
-        <label for = "Correct">3</label>
-        <input type="radio" id="13B" name = "n13" value = "8">
-        <label for = "Incorrect">8</label>
-        <input type="radio" id="13C" name = "n13" value = "10">
-        <label for = "Incorrect">10</label>
-        <input type="radio" id="13D" name = "n13" value = "13">
-        <label for = "Incorrect">13</label>
-    </div>
-    
-    <div id =  "q14" class = "radio-toolbar">
-        <p>How many iron atoms are on the head of a pin?</p>
-        <input type="radio" id="14A" name = "n14" value = "3">
-        <label for = "Incorrect">3</label>
-        <input type="radio" id="14B" name = "n14" value = "8">
-        <label for = "Incorrect">8</label>
-        <input type="radio" id="14C" name = "n14" value = "13">
-        <label for = "Correct">13</label>
-        <input type="radio" id="14D" name = "n14" value = "23">
-        <label for = "Incorrect">23</label>
-    </div>
-    
-    <div id =  "q15" class = "radio-toolbar">
-        <p>If all the rain that falls during a typical summer rainstorm were gathered into a single drop, what would the drop�s radius (in meters) be?</p>
-        <input type="radio" id="15A" name = "n15" value = "3">
-        <label for = "Correct">3</label>
-        <input type="radio" id="15B" name = "n15" value = "8">
-        <label for = "Incorrect">8</label>
-        <input type="radio" id="15C" name = "n15" value = "10">
-        <label for = "Incorrect">10</label>
-        <input type="radio" id="15D" name = "n15" value = "13">
-        <label for = "Incorrect">13</label>
-    </div>
-    
-    <div id =  "q16" class = "radio-toolbar">
-        <p>When a large ship (oil tanker / cargo ship / aircraft carrier / etc.) is placed into the ocean, how much does the global sea level rise (in meters)?</p>
-        <input type="radio" id="16A" name = "n16" value = "-30">
-        <label for = "Incorrect">-30</label>
-        <input type="radio" id="16B" name = "n16" value = "-20">
-        <label for = "Incorrect">-20</label>
-        <input type="radio" id="16C" name = "n16" value = "-15">
-        <label for = "Incorrect">-15</label>
-        <input type="radio" id="16D" name = "n16" value = "-10">
-        <label for = "Correct">-10</label>
-    </div>
-    
-    <div id =  "q17" class = "radio-toolbar">
-        <p>How many airline passengers are in the air over the United States right now?</p>
-        <input type="radio" id="17A" name = "n17" value = "1">
-        <label for = "Incorrect">1</label>
-        <input type="radio" id="17B" name = "n17" value = "3">
-        <label for = "Incorrect">3</label>
-        <input type="radio" id="17C" name = "n17" value = "6">
-        <label for = "Correct">6</label>
-        <input type="radio" id="17D" name = "n17" value = "16">
-        <label for = "Incorrect">16</label>
-    </div>
-    
-    <div id =  "q18" class = "radio-toolbar">
-        <p>What is the kinetic energy (Joules) stored in continental drift?</p>
-        <input type="radio" id="18A" name = "n18" value = "2">
-        <label for = "Correct">2</label>
-        <input type="radio" id="18B" name = "n18" value = "7">
-        <label for = "Incorrect">7</label>
-        <input type="radio" id="18C" name = "n18" value = "9">
-        <label for = "Incorrect">9</label>
-        <input type="radio" id="18D" name = "n18" value = "12">
-        <label for = "Incorrect">12</label>
-    </div>
-    
-    <div id =  "q19" class = "radio-toolbar">
-        <p>How many babies are born in New Haven on an average day?</p>
-        <input type="radio" id="19A" name = "n19" value = "1">
-        <label for = "Correct">1</label>
-        <input type="radio" id="19B" name = "n19" value = "6">
-        <label for = "Incorrect">6</label>
-        <input type="radio" id="19C" name = "n19" value = "8">
-        <label for = "Incorrect">8</label>
-        <input type="radio" id="19D" name = "n19" value = "11">
-        <label for = "Incorrect">11</label>
-    </div>
-    
-    <div id =  "q20" class = "radio-toolbar">
-        <p>How many trees are there in Connecticut?</p>
-        <input type="radio" id="20A" name = "n20" value = "2">
-        <label for = "Incorrect">2</label>
-        <input type="radio" id="20B" name = "n20" value = "4">
-        <label for = "Incorrect">4</label>
-        <input type="radio" id="20C" name = "n20" value = "7">
-        <label for = "Correct">7</label>
-        <input type="radio" id="20D" name = "n20" value = "17">
-        <label for = "Incorrect">17</label>
-    </div>
-    
-    <div id =  "q21" class = "radio-toolbar">
-        <p>You have a one-liter bottle of water. What is the area you could cover with this water if it were spread to be one molecule thick?</p>
-        <input type="radio" id="21A" name = "n21" value = "2">
-        <label for = "Incorrect">2</label>
-        <input type="radio" id="21B" name = "n21" value = "4">
-        <label for = "Incorrect">4</label>
-        <input type="radio" id="21C" name = "n21" value = "7">
-        <label for = "Correct">7</label>
-        <input type="radio" id="21D" name = "n21" value = "17">
-        <label for = "Incorrect">17</label>
-    </div>
-    
-    <div id =  "q22" class = "radio-toolbar">
-        <p>How long a line can an average pencil make?</p>
-        <input type="radio" id="22A" name = "n22" value = "3">
-        <label for = "Correct">3</label>
-        <input type="radio" id="22B" name = "n22" value = "8">
-        <label for = "Incorrect">8</label>
-        <input type="radio" id="22C" name = "n22" value = "10">
-        <label for = "Incorrect">10</label>
-        <input type="radio" id="22D" name = "n22" value = "13">
-        <label for = "Incorrect">13</label>
-    </div>
-    
-    <div id =  "q23" class = "radio-toolbar">
-        <p>If all the soda that is drunk in the United States during a typical day were gathered into a single drop, what would the drop�s radius (meters) be?</p>
-        <input type="radio" id="23A" name = "n23" value = "2">
-        <label for = "Correct">2</label>
-        <input type="radio" id="23B" name = "n23" value = "7">
-        <label for = "Incorrect">7</label>
-        <input type="radio" id="23C" name = "n23" value = "9">
-        <label for = "Incorrect">9</label>
-        <input type="radio" id="23D" name = "n23" value = "12">
-        <label for = "Incorrect">12</label>
-    </div>
-    
-    <div id =  "q24" class = "radio-toolbar">
-        <p>Despite what you may have learned in chemistry class, any pair of atoms will stick to each other to form a diatomic molecule. Given this fact, how many species of diatomic molecules are there?</p>
-        <input type="radio" id="24A" name = "n24" value = "2">
-        <label for = "Correct">2</label>
-        <input type="radio" id="24B" name = "n24" value = "7">
-        <label for = "Incorrect">7</label>
-        <input type="radio" id="24C" name = "n24" value = "9">
-        <label for = "Incorrect">9</label>
-        <input type="radio" id="24D" name = "n24" value = "12">
-        <label for = "Incorrect">12</label>
-    </div>
-    
-    <div id =  "q25" class = "radio-toolbar">
-        <p>Sunlight exerts a force of 1 micronewton per square meter. Ignoring friction, how long (seconds) would it take a car powered by this force to go from 0 mph to 60 mph (or, equivalently, from 0 kph to 100 kph)?</p>
-        <input type="radio" id="25A" name = "n25" value = "1">
-        <label for = "Incorrect">1</label>
-        <input type="radio" id="25B" name = "n25" value = "6">
-        <label for = "Incorrect">6</label>
-        <input type="radio" id="25C" name = "n25" value = "11">
-        <label for = "Correct">11</label>
-        <input type="radio" id="25D" name = "n25" value = "21">
-        <label for = "Incorrect">21</label>
-    </div>
-    
-    
-</form>
+    <div class="dropdown nav-drop">
+        <img src="lambda.png" width="60px" alt="logo" style="margin: 5px;"/>
 
-<p id = "res"></p>
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="true" style="width: 100%">
+            <span class="glyphicon glyphicon-menu-hamburger" style="top: -2px;left: -7px;" aria-hidden="true"></span>
+            <span class="h2">Menu</span>
+        </button>
+        <ul id="navul" class="dropdown-menu" aria-labelledby="dropdownMenu1" style="width: 100%"></ul>
+    </div>
+
+    <script>
+        (function () {
+            Array.from(document.querySelectorAll("nav a")).forEach(a => {
+                if (a.href === location.href) {
+                    a.classList.add('active');
+                    document.querySelector("ul#navul").innerHTML += `<li><a class="active" href="${a.href}">${a.innerText}</a></li>`
+
+                } else {
+                    document.querySelector("ul#navul").innerHTML += `<li><a href="${a.href}">${a.innerText}</a></li>`
+                }
+            })
+        })();
+    </script>
+</nav>
+
+<div id="content-wrapper">
+    <div id="page-content">
+        <form name = "quiz" id = "quiz">
+            <div id =  "q1" class = "radio-toolbar">
+                <p>How many seconds are there in a year?</p>
+                <input type="radio" id="1A" name = "n1" value = "2">
+                <label for = "Incorrect">2</label>
+                <input type="radio" id="1B" name = "n1" value = "4">
+                <label for = "Incorrect">4</label>
+                <input type="radio" id="1C" name = "n1" value = "7">
+                <label for = "Correct">7</label>
+                <input type="radio" id="1D" name = "n1" value = "17">
+                <label for = "Incorrect">17</label>
+            </div>
+            
+            <div id =  "q2" class = "radio-toolbar">
+                <p>How many miles are there in a light-year?</p>
+                <input type="radio" id="2A" name = "n2" value = "3">
+                <label for = "Incorrect">3</label>
+                <input type="radio" id="2B" name = "n2" value = "8">
+                <label for = "Incorrect">8</label>
+                <input type="radio" id="2C" name = "n2" value = "13">
+                <label for = "Correct">13</label>
+                <input type="radio" id="2D" name = "n2" value = "23">
+                <label for = "Incorrect">23</label>
+            </div>
+            
+            <div id =  "q3" class = "radio-toolbar">
+                <p>How many kilometers are there in a light-year?</p>
+                <input type="radio" id="3A" name = "n3" value = "3">
+                <label for = "Incorrect">3</label>
+                <input type="radio" id="3B" name = "n3" value = "8">
+                <label for = "Incorrect">8</label>
+                <input type="radio" id="3C" name = "n3" value = "13">
+                <label for = "Correct">13</label>
+                <input type="radio" id="3D" name = "n3" value = "23">
+                <label for = "Incorrect">23</label>
+            </div>
+            
+            <div id =  "q4" class = "radio-toolbar">
+                <p>For the average American woman, how many times will her heart beat during her lifetime?</p>
+                <input type="radio" id="4A" name = "n4" value = "4">
+                <label for = "Incorrect">4</label>
+                <input type="radio" id="4B" name = "n4" value = "6">
+                <label for = "Incorrect">6</label>
+                <input type="radio" id="4C" name = "n4" value = "9">
+                <label for = "Correct">9</label>
+                <input type="radio" id="4D" name = "n4" value = "19">
+                <label for = "Incorrect">19</label>
+            </div>
+            
+            <div id =  "q5" class = "radio-toolbar">
+                <p>How many heartbeats are there in a year for the entire world's population?</p>
+                <input type="radio" id="5A" name = "n5" value = "12">
+                <label for = "Incorrect">12</label>
+                <input type="radio" id="5B" name = "n5" value = "17">
+                <label for = "Correct">17</label>
+                <input type="radio" id="5C" name = "n5" value = "27">
+                <label for = "Incorrect">27</label>
+                <input type="radio" id="5D" name = "n5" value = "47">
+                <label for = "Incorrect">47</label>
+            </div>
+            
+            <div id =  "q6" class = "radio-toolbar">
+                <p>How many pounds of rice were consumed in the U.S. in the year 2001?</p>
+                <input type="radio" id="6A" name = "n6" value = "-10">
+                <label for = "Incorrect">-10</label>
+                <input type="radio" id="6B" name = "n6" value = "0">
+                <label for = "Incorrect">0</label>
+                <input type="radio" id="6C" name = "n6" value = "5">
+                <label for = "Incorrect">5</label>
+                <input type="radio" id="6D" name = "n6" value = "10">
+                <label for = "Correct">10</label>
+            </div>
+            
+            <div id =  "q7" class = "radio-toolbar">
+                <p>What is the density of butter in g/cc?</p>
+                <input type="radio" id="7A" name = "n7" value = "0">
+                <label for = "Correct">0</label>
+                <input type="radio" id="7B" name = "n7" value = "5">
+                <label for = "Incorrect">5</label>
+                <input type="radio" id="7C" name = "n7" value = "7">
+                <label for = "Incorrect">7</label>
+                <input type="radio" id="7D" name = "n7" value = "10">
+                <label for = "Incorrect">10</label>
+            </div>
+            
+            <div id =  "q8" class = "radio-toolbar">
+                <p>What fraction of a mile is a cm?</p>
+                <input type="radio" id="8A" name = "n8" value = "-25">
+                <label for = "Incorrect">-25</label>
+                <input type="radio" id="8B" name = "n8" value = "-15">
+                <label for = "Incorrect">-15</label>
+                <input type="radio" id="8C" name = "n8" value = "-10">
+                <label for = "Incorrect">-10</label>
+                <input type="radio" id="8D" name = "n8" value = "-5">
+                <label for = "Correct">-5</label>
+            </div>
+            
+            <div id =  "q9" class = "radio-toolbar">
+                <p>What is the area, in sq. miles, of the original 48 states of the U.S.?</p>
+                <input type="radio" id="9A" name = "n9" value = "1">
+                <label for = "Incorrect">1</label>
+                <input type="radio" id="9B" name = "n9" value = "3">
+                <label for = "Incorrect">3</label>
+                <input type="radio" id="9C" name = "n9" value = "6">
+                <label for = "Correct">6</label>
+                <input type="radio" id="9D" name = "n9" value = "16">
+                <label for = "Incorrect">16</label>
+            </div>
+            
+            <div id =  "q10" class = "radio-toolbar">
+                <p>What is the area of the U.S. in cm^2?</p>
+                <input type="radio" id="10A" name = "n10" value = "12">
+                <label for = "Incorrect">12</label>
+                <input type="radio" id="10B" name = "n10" value = "17">
+                <label for = "Correct">17</label>
+                <input type="radio" id="10C" name = "n10" value = "27">
+                <label for = "Incorrect">27</label>
+                <input type="radio" id="10D" name = "n10" value = "47">
+                <label for = "Incorrect">47</label>
+            </div>
+            
+            <div id =  "q11" class = "radio-toolbar">
+                <p>What is the area of Lake Superior in sq. miles?</p>
+                <input type="radio" id="11A" name = "n11" value = "4">
+                <label for = "Correct">4</label>
+                <input type="radio" id="11B" name = "n11" value = "9">
+                <label for = "Incorrect">9</label>
+                <input type="radio" id="11C" name = "n11" value = "11">
+                <label for = "Incorrect">11</label>
+                <input type="radio" id="11D" name = "n11" value = "14">
+                <label for = "Incorrect">14</label>
+            </div>
+            
+            <div id =  "q12" class = "radio-toolbar">
+                <p>Estimate the volume of Lake Superior in cubic kilometers</p>
+                <input type="radio" id="12A" name = "n12" value = "4">
+                <label for = "Correct">4</label>
+                <input type="radio" id="12B" name = "n12" value = "9">
+                <label for = "Incorrect">9</label>
+                <input type="radio" id="12C" name = "n12" value = "11">
+                <label for = "Incorrect">11</label>
+                <input type="radio" id="12D" name = "n12" value = "14">
+                <label for = "Incorrect">14</label>
+            </div>
+            
+            <div id =  "q13" class = "radio-toolbar">
+                <p>How many cubic kilometers of rain fall of the U.S. (48 original states) in one year?</p>
+                <input type="radio" id="13A" name = "n13" value = "3">
+                <label for = "Correct">3</label>
+                <input type="radio" id="13B" name = "n13" value = "8">
+                <label for = "Incorrect">8</label>
+                <input type="radio" id="13C" name = "n13" value = "10">
+                <label for = "Incorrect">10</label>
+                <input type="radio" id="13D" name = "n13" value = "13">
+                <label for = "Incorrect">13</label>
+            </div>
+            
+            <div id =  "q14" class = "radio-toolbar">
+                <p>How many iron atoms are on the head of a pin?</p>
+                <input type="radio" id="14A" name = "n14" value = "3">
+                <label for = "Incorrect">3</label>
+                <input type="radio" id="14B" name = "n14" value = "8">
+                <label for = "Incorrect">8</label>
+                <input type="radio" id="14C" name = "n14" value = "13">
+                <label for = "Correct">13</label>
+                <input type="radio" id="14D" name = "n14" value = "23">
+                <label for = "Incorrect">23</label>
+            </div>
+            
+            <div id =  "q15" class = "radio-toolbar">
+                <p>If all the rain that falls during a typical summer rainstorm were gathered into a single drop, what would the drop�s radius (in meters) be?</p>
+                <input type="radio" id="15A" name = "n15" value = "3">
+                <label for = "Correct">3</label>
+                <input type="radio" id="15B" name = "n15" value = "8">
+                <label for = "Incorrect">8</label>
+                <input type="radio" id="15C" name = "n15" value = "10">
+                <label for = "Incorrect">10</label>
+                <input type="radio" id="15D" name = "n15" value = "13">
+                <label for = "Incorrect">13</label>
+            </div>
+            
+            <div id =  "q16" class = "radio-toolbar">
+                <p>When a large ship (oil tanker / cargo ship / aircraft carrier / etc.) is placed into the ocean, how much does the global sea level rise (in meters)?</p>
+                <input type="radio" id="16A" name = "n16" value = "-30">
+                <label for = "Incorrect">-30</label>
+                <input type="radio" id="16B" name = "n16" value = "-20">
+                <label for = "Incorrect">-20</label>
+                <input type="radio" id="16C" name = "n16" value = "-15">
+                <label for = "Incorrect">-15</label>
+                <input type="radio" id="16D" name = "n16" value = "-10">
+                <label for = "Correct">-10</label>
+            </div>
+            
+            <div id =  "q17" class = "radio-toolbar">
+                <p>How many airline passengers are in the air over the United States right now?</p>
+                <input type="radio" id="17A" name = "n17" value = "1">
+                <label for = "Incorrect">1</label>
+                <input type="radio" id="17B" name = "n17" value = "3">
+                <label for = "Incorrect">3</label>
+                <input type="radio" id="17C" name = "n17" value = "6">
+                <label for = "Correct">6</label>
+                <input type="radio" id="17D" name = "n17" value = "16">
+                <label for = "Incorrect">16</label>
+            </div>
+            
+            <div id =  "q18" class = "radio-toolbar">
+                <p>What is the kinetic energy (Joules) stored in continental drift?</p>
+                <input type="radio" id="18A" name = "n18" value = "2">
+                <label for = "Correct">2</label>
+                <input type="radio" id="18B" name = "n18" value = "7">
+                <label for = "Incorrect">7</label>
+                <input type="radio" id="18C" name = "n18" value = "9">
+                <label for = "Incorrect">9</label>
+                <input type="radio" id="18D" name = "n18" value = "12">
+                <label for = "Incorrect">12</label>
+            </div>
+            
+            <div id =  "q19" class = "radio-toolbar">
+                <p>How many babies are born in New Haven on an average day?</p>
+                <input type="radio" id="19A" name = "n19" value = "1">
+                <label for = "Correct">1</label>
+                <input type="radio" id="19B" name = "n19" value = "6">
+                <label for = "Incorrect">6</label>
+                <input type="radio" id="19C" name = "n19" value = "8">
+                <label for = "Incorrect">8</label>
+                <input type="radio" id="19D" name = "n19" value = "11">
+                <label for = "Incorrect">11</label>
+            </div>
+            
+            <div id =  "q20" class = "radio-toolbar">
+                <p>How many trees are there in Connecticut?</p>
+                <input type="radio" id="20A" name = "n20" value = "2">
+                <label for = "Incorrect">2</label>
+                <input type="radio" id="20B" name = "n20" value = "4">
+                <label for = "Incorrect">4</label>
+                <input type="radio" id="20C" name = "n20" value = "7">
+                <label for = "Correct">7</label>
+                <input type="radio" id="20D" name = "n20" value = "17">
+                <label for = "Incorrect">17</label>
+            </div>
+            
+            <div id =  "q21" class = "radio-toolbar">
+                <p>You have a one-liter bottle of water. What is the area you could cover with this water if it were spread to be one molecule thick?</p>
+                <input type="radio" id="21A" name = "n21" value = "2">
+                <label for = "Incorrect">2</label>
+                <input type="radio" id="21B" name = "n21" value = "4">
+                <label for = "Incorrect">4</label>
+                <input type="radio" id="21C" name = "n21" value = "7">
+                <label for = "Correct">7</label>
+                <input type="radio" id="21D" name = "n21" value = "17">
+                <label for = "Incorrect">17</label>
+            </div>
+            
+            <div id =  "q22" class = "radio-toolbar">
+                <p>How long a line can an average pencil make?</p>
+                <input type="radio" id="22A" name = "n22" value = "3">
+                <label for = "Correct">3</label>
+                <input type="radio" id="22B" name = "n22" value = "8">
+                <label for = "Incorrect">8</label>
+                <input type="radio" id="22C" name = "n22" value = "10">
+                <label for = "Incorrect">10</label>
+                <input type="radio" id="22D" name = "n22" value = "13">
+                <label for = "Incorrect">13</label>
+            </div>
+            
+            <div id =  "q23" class = "radio-toolbar">
+                <p>If all the soda that is drunk in the United States during a typical day were gathered into a single drop, what would the drop�s radius (meters) be?</p>
+                <input type="radio" id="23A" name = "n23" value = "2">
+                <label for = "Correct">2</label>
+                <input type="radio" id="23B" name = "n23" value = "7">
+                <label for = "Incorrect">7</label>
+                <input type="radio" id="23C" name = "n23" value = "9">
+                <label for = "Incorrect">9</label>
+                <input type="radio" id="23D" name = "n23" value = "12">
+                <label for = "Incorrect">12</label>
+            </div>
+            
+            <div id =  "q24" class = "radio-toolbar">
+                <p>Despite what you may have learned in chemistry class, any pair of atoms will stick to each other to form a diatomic molecule. Given this fact, how many species of diatomic molecules are there?</p>
+                <input type="radio" id="24A" name = "n24" value = "2">
+                <label for = "Correct">2</label>
+                <input type="radio" id="24B" name = "n24" value = "7">
+                <label for = "Incorrect">7</label>
+                <input type="radio" id="24C" name = "n24" value = "9">
+                <label for = "Incorrect">9</label>
+                <input type="radio" id="24D" name = "n24" value = "12">
+                <label for = "Incorrect">12</label>
+            </div>
+            
+            <div id =  "q25" class = "radio-toolbar">
+                <p>Sunlight exerts a force of 1 micronewton per square meter. Ignoring friction, how long (seconds) would it take a car powered by this force to go from 0 mph to 60 mph (or, equivalently, from 0 kph to 100 kph)?</p>
+                <input type="radio" id="25A" name = "n25" value = "1">
+                <label for = "Incorrect">1</label>
+                <input type="radio" id="25B" name = "n25" value = "6">
+                <label for = "Incorrect">6</label>
+                <input type="radio" id="25C" name = "n25" value = "11">
+                <label for = "Correct">11</label>
+                <input type="radio" id="25D" name = "n25" value = "21">
+                <label for = "Incorrect">21</label>
+            </div>
+            
+            
+        </form>
+        
+        <p id = "res"></p>
+    </div>
+</div>
+<div class="footer">
+    <p>Email me at <a href="mailto:wangbill@mit.edu">wangbill@mit.edu</a></p>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>
