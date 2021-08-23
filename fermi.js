@@ -90,7 +90,7 @@ function loadQuestions() {
 
 function loadAnswers() {
     let numberCorrect = localStorage.getItem('numberCorrect');
-    res.textContent = "You're score: " + `${numberCorrect}`;
+    res.textContent = "Your score: " + `${numberCorrect}`;
     var qDisplayNums = localStorage.getItem('qDisplayNums');
     qDisplayNums = qDisplayNums.split(",");
     for (var j = 0; j < qDisplayNums.length; j++) {
